@@ -1,0 +1,7 @@
+---
+import {db} from '../db';
+
+//const {rows} = await db.query('SELECT NOW() as "time"');
+export const {rows} = await db.query('SELECT termino.id_termino, termino.nombre, termino.significado, termino.excepcion, politica.nombre_politica, categoria.nombre_categoria FROM termino JOIN politica ON termino.id_politica = politica.id_politica JOIN categoria ON termino.id_categoria = categoria.id_categoria;');
+---
+
